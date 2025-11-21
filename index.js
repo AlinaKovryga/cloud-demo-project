@@ -1,3 +1,4 @@
+
 const http = require('http');
 const url = require('url');
 
@@ -13,6 +14,7 @@ const server = http.createServer((req, res) => {
         res.end();
         return;
     }
+
     const parsedUrl = url.parse(req.url, true);
     const name = parsedUrl.query.name || 'world';
 
